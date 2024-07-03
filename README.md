@@ -21,10 +21,13 @@ Hooks like useState , useEffect are used
 Storage like Local Storage is used 
 When website is loaded , if already todo's are there , then they will be displayed.
 Adding , deleting Todo item from local storage is provided in this app.
-# Buttons Functionality Walk Through
-"Edit" icon on Top-left corner is used to edit the Todo details
+# Buttons Functionality Walk Through.
+"Edit" icon on Top-left corner is used to edit the Todo details.
+
 A button with "eyeicon Details" text is for viewing each Todo Details like todo , priority.
+
 Button with text as "complete" is used to mark down a todo whether it is completed or not.
+
 Button at Bottom-right corner with bin symbol is used to delete a Todo item.
 
 # Live Website Link
