@@ -113,11 +113,13 @@ const Home = ()=>{
         <button type = "button" className = "addBtnStyling" onClick = {handleAddingTodo} >Add</button>
         </div>
         <div className  = "tasksDisplayingContainer">
-        <ul>
+        {
+            todoList.length === 0? (<h1>No todo's , Have a Nice day</h1>):(<ul>
             {
                 todoList.map((eachTodo)=>(<EachTodo key = {eachTodo.id} todoDetails = {eachTodo} handleDeleteTodo = {handleDeleteTodo} toggleCompletion = {toggleCompletion} handleEditingTodo = {handleEditingTodo} handleBlurring = {handleBlurring}  />))
             }
-        </ul>
+        </ul>)
+        }
         </div>
         </div>
 )}
