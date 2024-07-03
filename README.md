@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with Todo App Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Home Component
+
+In this Home component , overall All components are embedded here
 
 ## Available Scripts
 
