@@ -27,7 +27,7 @@ const EachTodo = (props)=> {
         <li className = "eachTodoLiContainer">
         <div>
             <div className = "topContStyling">
-            <p><span style = {{marginRight : '10px'}}><EachTodoPopupEdit eachTodoDetails = {todoDetails}  handleEditingTodo = {handleEditingTodo} /></span>{todo.length>25 ? todo.slice(0 , 25)+'...': todo}</p>
+            <p><span style = {{marginRight : '10px'}}><EachTodoPopupEdit eachTodoDetails = {todoDetails}  handleEditingTodo = {handleEditingTodo} /></span>{todo.length>40? todo.slice(0 , 40)+'...': todo}</p>
             <p><span><FaCircle size = {10} color = {returnColor()} /></span>{todoDetails.priority}</p>
             </div>
             <div className = "optionsContainer">
