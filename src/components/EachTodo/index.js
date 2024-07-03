@@ -5,9 +5,11 @@ import './index.css'
 
 
 const EachTodo = (props)=> {
+    // Here , Each Todo details are sent through Props
     const {todoDetails , handleDeleteTodo , toggleCompletion , handleEditingTodo}= props;
-    const {todo} = todoDetails;
+    const {todo} = todoDetails; 
 
+    // below method is to return color name based on priority
     const returnColor = ()=> {
         switch(todoDetails.priority) {
             case 'low':

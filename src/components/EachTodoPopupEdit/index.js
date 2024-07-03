@@ -1,19 +1,21 @@
 import {useState} from 'react';
-import { FaEdit ,FaEye} from 'react-icons/fa';
+import { FaEdit} from 'react-icons/fa';
 import './index.css';
 
 const EachTodoPopupEdit = (props)=> {
     const {eachTodoDetails , handleEditingTodo} = props;
-
+    // each Todo details are sent using Props
     const [todo , setTodo] = useState(eachTodoDetails.todo);
     const [priority , setPriority] = useState(eachTodoDetails.priority);
     const [toDisplay , setToDisplay] = useState(false);
-
+    // todo state variable is for handling input value for changing todo value
+    // priority state variable is for handling priority for changing priority value
     const handleChangingTodo = (event)=> {
         setTodo(event.target.value);
     }
 
     const handleModifyingTodos = ()=> {
+        // here , all changed values are sent as arguments to handleEditingTodo with todo id.
         handleEditingTodo(eachTodoDetails.id , todo , priority);
         setToDisplay(false);
     }

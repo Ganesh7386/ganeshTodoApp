@@ -10,9 +10,8 @@ const Home = ()=>{
     const [todoList , setTodoList] = useState([]);
     const [todoValue , setTodoValue] = useState("");
     const [priority , setPriority] = useState('low');
-    const [doBlur , setDoBlur] = useState(true);
     const [errorMsg , setErrorMsg] = useState("");
-
+    // below method is used , when application is launched.It retrieves data stored in Local Storage and set as value in todoList state .
     const getStoredTodos = ()=> {
         const storedList = localStorage.getItem('mytodo');
         // console.log(JSON.parse(storedList));
@@ -25,14 +24,10 @@ const Home = ()=>{
     }
     const handleChangeInput = (event)=> {
         setTodoValue(event.target.value);
-        // console.log(event.target.value);
     }
 
-    const handleBlurring = ()=> {
-        setDoBlur(!doBlur);
-    }
     
-
+    // below method is for adding a Todo item document in a list
     const handleAddingTodo = ()=> {
         if(todoValue === "") {
             setErrorMsg("Please enter a todo");
@@ -48,20 +43,18 @@ const Home = ()=>{
         setTodoValue("");
         const newList = [...todoList , newTodo];
         localStorage.setItem('mytodo' , JSON.stringify(newList));
+        // a new List with added Todo is added to mytodo in local storage
         setErrorMsg("");
         }
     }
 
-    // const cacheTodoList = ()=> {
-    //     localStorage.setItem('mytodo' , JSON.stringify(todoList));
-    // }
-
+    // below function is defined to delete a todo based on given id.Filtered using filter method of array
     const handleDeleteTodo = (id)=> {
         const newTodoList = todoList.filter((eachTodo)=>(eachTodo.id !== id));
         setTodoList(newTodoList);
         localStorage.setItem('mytodo' , JSON.stringify(newTodoList));
     }
-
+    // below function is used to toggle completion status based on given id.
     const toggleCompletion = (id)=> {
         const newList = todoList.map((eachTodo)=>{
             if(eachTodo.id === id) {
@@ -72,7 +65,7 @@ const Home = ()=>{
         setTodoList(newList);
         localStorage.setItem('mytodo' , JSON.stringify(newList));
     }
-
+    // below method is used for editing a todo when its id is given . Searched based on it's id , then key values are changed.
     const handleEditingTodo = (id , todoValue , priority)=> {
         const modifiedList = todoList.map((eachTodo)=> {
             if(eachTodo.id === id) {
@@ -84,20 +77,14 @@ const Home = ()=>{
         setTodoList(modifiedList);
         localStorage.setItem('mytodo' , JSON.stringify(modifiedList));
     }
-
+    // below method is for handling change in priority
     const handlePriority = (event)=> {
         setPriority(event.target.value);
     }
-
+    // called when component Did Mount phase occurs , when app is launched
     useEffect(()=> {
         getStoredTodos();
     },[])
-
-
-
-    // useEffect(()=> {
-    //     cacheTodoList();
-    // },[todoList])
 
     return (
         <div className = {`overAllAppContainer`}>
