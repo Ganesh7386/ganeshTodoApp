@@ -1,0 +1,29 @@
+.popupDetailsContainer {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    position: fixed;
+    z-index : 2;
+    height : 600px;
+    max-width : 60%;
+    left : 20%;
+    right : 20%;
+    top : 5%;
+    right : 10px;
+    text-align: start;
+}
+.taskPara {
+    word-wrap: break-word; 
+}
+
+.toDisplayStyling {
+    display: block;
+    height : 300px;
+    width : 300px;
+}
+
+.toHideStyling {
+    display: none;
+    height : 0px;
+    width : 0px;
+}

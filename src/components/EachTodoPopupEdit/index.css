@@ -1,0 +1,23 @@
+.editingPopupContainer {
+    background-color: white;
+    border : 5px solid black;
+    border-radius: 10px;
+    position: fixed;
+    box-sizing: border-box;
+    max-width : 60%;
+    transition: height 2s ease-in-out;
+    left : 20%;
+    right : 20%;
+    top : 5%;
+    right : 10px;
+}
+
+.toDisplayStyling {
+    /* display: block; */
+    height : 600px;
+}
+
+.toHideStyling {
+    /* display: none; */
+    height : 0px;
+}

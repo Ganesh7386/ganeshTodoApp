@@ -1,0 +1,25 @@
+.eachTodoLiContainer {
+    background-color: pink;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width : 100%;
+}
+
+.eachTodoLiContainer div {
+    width : 100%;
+    padding : 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.topContStyling {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.optionsContainer {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
