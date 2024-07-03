@@ -36,10 +36,10 @@
     border : 3px solid black;
     border-radius: 10px;
 }
-
+/* 
 .tasksDisplayingContainer {
     background-color: red;
-}
+} */
 
 .tasksDisplayingContainer ul {
     width : 95%;

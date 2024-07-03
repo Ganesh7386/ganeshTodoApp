@@ -3,6 +3,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     width : 100%;
+    background-color: #E4E6EB;
 }
 
 .eachTodoLiContainer div {
@@ -22,4 +23,52 @@
     display : flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+
+.completedStyling {
+    border : 3px solid green;
+    color : green;
+    height : 40px;
+    width : 100px;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.completedStyling:hover {
+    background-color: red;
+}
+.incompleteStyling {
+    border : 3px solid red;
+    color : red;
+    height : 40px;
+    width : 100px;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.incompleteStyling:hover {
+    background-color: darkgreen;
+}
+
+.deleteBtnStyling {
+    text-align: center;
+    height : 40px;
+    width : 40px;
+    border-radius: 20px;
+}
+
+.deleteBtnStyling:hover {
+    background-color: red;
+}
+
+
+.airTaggingContainerEditing {
+    height : 50px;
+    max-width : 150px;
+    border : 2px solid black;
+    background-color: white;
+    border-radius: 20px;
+    position:relative;
+    top : 10px;
+    left : 30px;
+    z-index : 5;
 }

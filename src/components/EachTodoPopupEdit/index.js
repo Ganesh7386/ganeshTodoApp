@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { FaEdit ,FaEye} from 'react-icons/fa';
 import './index.css';
 
 const EachTodoPopupEdit = (props)=> {
@@ -19,9 +20,9 @@ const EachTodoPopupEdit = (props)=> {
     
     return (
         <>
-        <button type = "button" onClick = {()=>{setToDisplay(true)}}>edit</button>
+        <button className = "editBtnStyling" type = "button" onClick = {()=>{setToDisplay(true)}}><FaEdit size = {20}/></button>
         <div className = {`editingPopupContainer ${toDisplay? 'toDisplayStyling' : 'toHideStyling'}  `}>
-        <p>Edit your todo</p>
+        <h1>Edit your todo</h1>
         <div>
         <input value = {todo} onChange = {handleChangingTodo}  />
         </div>

@@ -11,6 +11,15 @@
     top : 5%;
     right : 10px;
 }
+.editBtnStyling {
+    height : 30px;
+    width : 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+.editBtnStyling:hover {
+    background-color: green;
+}
 
 .toDisplayStyling {
     /* display: block; */

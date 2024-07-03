@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {FaEye} from 'react-icons/fa';
 import './index.css'
 
 const EachTodoPopupDetails = (props)=> {
@@ -8,7 +9,7 @@ const EachTodoPopupDetails = (props)=> {
 
     return (
         <>
-            <button type = "button" onClick = {()=>{setToDisplay(true)}} >details</button>
+            <button className = "detailedViewButton" type = "button" onClick = {()=>{setToDisplay(true)}} ><FaEye size = {20}/>details</button>
             <div className = {`popupDetailsContainer ${toDisplay? 'toDisplayStyling' : 'toHideStyling'} `}>
                 <p className = "taskPara">Todo task is : {todo}</p>
                 <p>Priority is : {eachTodoDetails.priority}</p>
