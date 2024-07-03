@@ -103,7 +103,7 @@ const Home = ()=>{
         {
             todoList.length === 0? (<h1>No todo's , Have a Nice day</h1>):(<ul>
             {
-                todoList.map((eachTodo)=>(<EachTodo key = {eachTodo.id} todoDetails = {eachTodo} handleDeleteTodo = {handleDeleteTodo} toggleCompletion = {toggleCompletion} handleEditingTodo = {handleEditingTodo} handleBlurring = {handleBlurring}  />))
+                todoList.map((eachTodo)=>(<EachTodo key = {eachTodo.id} todoDetails = {eachTodo} handleDeleteTodo = {handleDeleteTodo} toggleCompletion = {toggleCompletion} handleEditingTodo = {handleEditingTodo}  />))
             }
         </ul>)
         }
